@@ -42,3 +42,20 @@ export const Video = {
   render: (args: ArtworkProps) => <Artwork { ...args }></Artwork>,
 };
 
+export const Cover = {
+  args: {
+    asset: {
+        src: ArtworkMP4,
+        alt: "Giulian Drimba"
+    },
+    format: 'cover',
+    meta: {
+        type: 'media',
+        title: 'Untitled',
+        tech: 'Javascript / GLSL',
+        date: '12/12/12',
+    }
+  },
+  render: (args: ArtworkProps) => <Artwork { ...args }></Artwork>,
+};
+
