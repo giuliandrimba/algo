@@ -21,13 +21,13 @@ export const Artwork = ({ meta, className, asset, size = 'sm' }: ArtworkProps) =
   return (
     <div className="w-sm">
       {meta.type === 'media' && 
-        <video className="aspect-auto" src={asset.src} autoPlay loop muted>
+        <video className="aspect-auto border-[50px] border-black" src={asset.src} autoPlay loop muted>
           <track kind="captions" src="" label="No captions available" />
         </video>
       }
       {meta.type === 'image' && 
         <Image 
-          className='aspect-auto'
+          className='aspect-auto border-[50px] border-black'
           src={asset.src} 
           alt={asset.alt || meta.title} 
           width={asset.width || 400}
