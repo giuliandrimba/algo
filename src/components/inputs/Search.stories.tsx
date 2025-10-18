@@ -4,8 +4,8 @@ import { Search } from "./Search";
 
 const meta = {
   title: "Form/Search",
-  component: Text,
-} satisfies Meta<typeof Text>;
+  component: Search,
+} satisfies Meta<typeof Search>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

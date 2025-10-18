@@ -8,7 +8,7 @@ export type SortProps = {
   value: "grid" | "stack";
 };
 
-export const Sort = ({ className, value = "stack", ...props }: FilterProps) => {
+export const Sort = ({ className, value = "stack", ...props }: SortProps) => {
   const buttons = [
     { label: "Grid", value: "grid" },
     { label: "Stack", value: "stack" }
