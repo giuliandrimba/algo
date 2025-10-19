@@ -1,5 +1,3 @@
-import ArtworkJPEG from "@/assets/artwork.jpg";
-import ArtworkMP4 from "@/assets/video.mp4";
 import { Artwork, type ArtworkProps } from "./Artwork";
 
 export default {
@@ -13,7 +11,7 @@ export default {
 export const Default = {
   args: {
     asset: {
-        src: ArtworkJPEG,
+        src: '/assets/image-2.jpg',
         alt: "Giulian Drimba"
     },
     meta: {
@@ -29,11 +27,11 @@ export const Default = {
 export const Video = {
   args: {
     asset: {
-        src: ArtworkMP4,
+        src: '/assets/video.mp4',
         alt: "Giulian Drimba"
     },
     meta: {
-        type: 'media',
+        type: 'video',
         title: 'Untitled',
         tech: 'Javascript / GLSL',
         date: '12/12/12',
@@ -45,12 +43,12 @@ export const Video = {
 export const Cover = {
   args: {
     asset: {
-        src: ArtworkMP4,
+         src: '/assets/video.mp4',
         alt: "Giulian Drimba"
     },
     format: 'cover',
     meta: {
-        type: 'media',
+        type: 'video',
         title: 'Untitled',
         tech: 'Javascript / GLSL',
         date: '12/12/12',
