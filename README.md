@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-[https://algo-git-main-giuliandrimba-projects.vercel.app/](https://algo-git-main-giuliandrimba-projects.vercel.app/)
+[https://algo-tawny.vercel.app/](https://algo-tawny.vercel.app/)
 
 ## Getting Started
 
