@@ -5,7 +5,7 @@ import { type MouseEvent } from "react";
 export type FilterProps = {
   className?: string;
   onChange?: (value: string) => void;
-  value: "all" | "video" | "image";
+  value?: "all" | "video" | "image";
 };
 
 export const Filter = ({ className, value = "all", ...props }: FilterProps) => {

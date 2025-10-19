@@ -20,6 +20,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.0",
     "@chromatic-com/storybook": "^4.1.1",
+    "@faker-js/faker": "^10.1.0",
     "@storybook/addon-a11y": "^9.1.13",
     "@storybook/addon-docs": "^9.1.13",
     "@storybook/addon-onboarding": "^9.1.13",

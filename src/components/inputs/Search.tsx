@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { Button } from "../button/Button";
-import Form from "next/form";
 
 type SearchProps = {
   label?: string;
@@ -9,12 +8,13 @@ type SearchProps = {
 };
 
 export const Search = ({ label, className, ...props }: SearchProps) => {
-  const onSubmit = () => {
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     console.log("submit");
   };
 
   return (
-    <Form action={onSubmit}>
+    <form onSubmit={onSubmit}>
       <span className="flex gap-2 justify-between min-w-[580px] max-w-fit border-b-1">
         <input
           type="text"
@@ -24,8 +24,8 @@ export const Search = ({ label, className, ...props }: SearchProps) => {
           )}
           {...props}
         />
-        <Button>Search</Button>
+        <Button type="submit">Search</Button>
       </span>
-    </Form>
+    </form>
   );
 };

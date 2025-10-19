@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0",
+    "cover": {
+      "asset": {
+        "src": "/assets/artwork.jpg",
+        "alt": "Artwork"
+      },
+      "meta": {
+        "type": "image",
+        "title": "Untitled",
+        "tech": "Many",
+        "date": "Today"
+      }
+    },
+    "content": [
+      {
+        "type": "text",
+        "props": {
+          "value": "Contemporary painter known for her ethereal use of color and texture. Her work explores the intersection between memory and landscape, often blending dreamlike horizons with fragmented human figures. Through layered acrylics and subtle metallic accents, she captures the tension between permanence and decay."
+        }
+      },
+      {
+        "type": "artworks",
+        "props": {
+          "items": [
+            {
+              "asset": {
+                "src": "/assets/artwork.jpg",
+                "alt": "Artwork"
+              },
+              "meta": {
+                "type": "image",
+                "title": "Untitled",
+                "tech": "Many",
+                "date": "Today"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "value": "Contemporary painter known for her ethereal use of color and texture. Her work explores the intersection between memory and landscape, often blending dreamlike horizons with fragmented human figures. Through layered acrylics and subtle metallic accents, she captures the tension between permanence and decay."
+        }
+      }
+    ]
+  }
+]

@@ -1,14 +1,17 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
+
+export type MediaType = 'media' | 'image';
 
 export type ArtworkProps = {
+  id: string
   asset: {
-    src: string;
+    src: string | StaticImageData;
     alt?: string;
     width?: number;
     height?: number;
   };
   meta: {
-    type: 'media' | 'image';
+    type: string;
     title: string;
     tech: string;
     date: string;
@@ -21,7 +24,7 @@ export type ArtworkProps = {
 export const Artwork = ({ meta, className, asset, size = 'sm', format = 'full' }: ArtworkProps) => {
   return (
     <div className="w-sm">
-      {meta.type === 'media' && 
+      {meta.type === 'media' && typeof asset.src === 'string' && 
         <video className="aspect-auto border-[50px] border-black" src={asset.src} autoPlay={format === 'full'} loop muted>
           <track kind="captions" src="" label="No captions available" />
         </video>

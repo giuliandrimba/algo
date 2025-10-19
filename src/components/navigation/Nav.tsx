@@ -1,3 +1,4 @@
+"use client";
 // biome-ignore assist/source/organizeImports: <explanation>
 import clsx from "clsx";
 import {
