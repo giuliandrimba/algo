@@ -1,5 +1,4 @@
 import { Hero } from "@/components/hero/Hero";
-import HeroJPEG from "../assets/hero.jpg";
 import { Text } from "@/components/text/Text";
 import { Container } from "@/components/blocks/Container";
 import "./globals.css";
@@ -17,7 +16,7 @@ export default async function RootLayout({
       <body>
         <AppProvider initialProducts={items}>
           <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-            <Hero asset={{ src: HeroJPEG, alt: "" }} />
+            <Hero asset={{ src: '/assets/hero.jpg', alt: "" }} />
 
             <Container className="relative bg-white">
               <Text className="mt-[70px] block pb-[120px]">

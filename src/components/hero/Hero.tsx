@@ -31,11 +31,12 @@ export const Hero = ({ meta, className, asset, size = 'sm', format = 'full', chi
         }
         {(meta?.type === 'image' || !meta) && 
           <Image 
+            quality={80}
             className='object-cover w-screen h-screen fixed top-0 right-0 z-0'
             src={asset.src} 
             alt={asset.alt || meta?.title || 'Hero image'} 
-            width={asset.width || 400}
-            height={asset.height || 300}
+            width={asset.width || 3454}
+            height={asset.height || 1914}
           />
         }
       </div>
