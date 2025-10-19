@@ -8,7 +8,7 @@ export type ContainerProps = {
 
 export const Container = ({ children, className }: ContainerProps) => {
   return (
-    <div className={clsx("block pl-[120px] pb-[80px] pr-[120px] max-width-[1120] bg-white", className)}>
+    <div className={clsx("block pl-[120px] pb-[80px] pr-[120px] max-width-[1120] bg-white w-full", className)}>
       {children}
     </div>
   );

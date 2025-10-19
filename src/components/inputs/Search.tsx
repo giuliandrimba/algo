@@ -18,7 +18,7 @@ export const Search = ({ label, className, onChange, ...props }: SearchProps) =>
 
   return (
     <form onSubmit={onSubmit}>
-      <span className="flex gap-2 justify-between min-w-[580px] max-w-fit border-b-1">
+      <span className="flex gap-2 justify-between lg:min-w-[580px] max-w-fit border-b-1">
         <input
           type="text"
           name='search'

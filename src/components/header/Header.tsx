@@ -9,7 +9,7 @@ export type HeaderProps = {
 
 export const Header = ({ onSearch, onFilter }: HeaderProps) => {
   return (
-    <header className="flex w-full justify-between pb-[120]">
+    <header className="flex flex-col gap-10 items-center lg:flex-row w-full justify-between pb-[120]">
       <Filter onChange={onFilter}></Filter>
       <Search onChange={onSearch} label='Search' />
       <Sort value='grid' />

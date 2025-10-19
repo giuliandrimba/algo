@@ -2,6 +2,7 @@ import { Artwork, type ArtworkProps } from "@/components/artwork/Artwork";
 import { Header } from "@/components/header/Header";
 import { useState } from "react";
 import { Project } from "@/types";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export type ArtworkCollectionProps = {
@@ -24,18 +25,36 @@ export const ArtworkCollection = ({ items }: ArtworkCollectionProps) => {
     setProjects(data);
   };
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.05, // delay between children
+      },
+    },
+  };
+
   return (
     <div>
       <Header onSearch={onSearch} />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-20 justify-items-center">
+      <motion.div 
+        key={projects.join(",")}
+        initial="hidden"
+        variants={containerVariants}
+        animate="visible"
+        className="w-full  grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:gap-6 md:gap-y-20 justify-items-center items-center">
         {projects.map((item, index) => {
           return (
-            <Link key={item.id} href={`/${item.id}`}>
-              <Artwork {...item.cover} />;
+            <Link
+              className="w-max flex items-center justify-center mb-20"
+              key={item.id}
+              href={`/${item.id}`}
+            >
+              <Artwork {...item.cover} />
             </Link>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };
