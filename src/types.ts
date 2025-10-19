@@ -9,7 +9,7 @@ export type TextContent = {
 
 export type ArtworksContent = {
     type: "artworks";
-    props: Omit<ArtworkProps, 'id'>;
+    props: ArtworkProps;
 };
 
 export type ContentType = TextContent | ArtworksContent;
@@ -17,6 +17,6 @@ export type ContentType = TextContent | ArtworksContent;
 export type Project = {
     id: string
     slug: string
-    cover: Omit<ArtworkProps, 'id'>
+    cover: ArtworkProps
     content: ContentType[]
 }

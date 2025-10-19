@@ -8,11 +8,12 @@ import type { Project, ContentType } from "@/types";
 import { faker } from "@faker-js/faker";
 
 async function fetchItems(): Promise<Project[]> {
+  console.log('fetchItems')
   const items = [];
 
   for (let i = 0; i < 12; i++) {
     const item = {
-      id: faker.string.uuid(),
+      id: i.toString(),
       slug: faker.lorem.slug(),
       cover: {
         asset: {
@@ -48,7 +49,7 @@ async function fetchItems(): Promise<Project[]> {
             },
             meta: {
               type: "image",
-              title: "asdasd",
+              title: faker.word.noun(),
               tech: "Many",
               date: "Today",
             },
