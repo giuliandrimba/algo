@@ -23,6 +23,7 @@ export type HeroProps = {
 export const Hero = ({ meta, className, asset, size = 'sm', format = 'full', children }: HeroProps) => {
   return (
     <div className="bg-white">
+      <h1 className="z-2 absolute text-white text-[15vw] translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]">A L G O</h1>
       <div className='w-screen h-screen relative bg-white'>
         {meta?.type === 'media' && typeof asset.src === 'string' && 
           <video className="object-cover w-screen h-screen fixed top-0 right-0 z-0" src={asset.src} autoPlay={format === 'full'} loop muted>

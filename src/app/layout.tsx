@@ -20,11 +20,7 @@ export default async function RootLayout({
 
             <Container className="relative bg-white">
               <Text className="mt-[70px] block pb-[120px]">
-                Contemporary painter known for her ethereal use of color and
-                texture. Her work explores the intersection between memory and
-                landscape, often blending dreamlike horizons with fragmented
-                human figures. Through layered acrylics and subtle metallic
-                accents, she captures the tension between permanence and decay.
+                Algo is a pioneering art collective that curates and showcases works generated through code. Blending creativity with computation, Algo brings together artists, designers, and technologists who use algorithms, data, and digital systems as their brushes. Each curated piece reflects the beauty of logic, randomness, and human intention — where art meets algorithm.
               </Text>
               <section>{children}</section>
               <footer className="row-start-3 flex gap-[24px] mt-60 flex-wrap items-center justify-center bg-white">
