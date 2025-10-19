@@ -3,7 +3,6 @@ import Image, { type StaticImageData } from "next/image";
 export type MediaType = 'media' | 'image';
 
 export type ArtworkProps = {
-  id: string
   asset: {
     src: string | StaticImageData;
     alt?: string;

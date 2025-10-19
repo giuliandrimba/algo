@@ -9,15 +9,14 @@ export type TextContent = {
 
 export type ArtworksContent = {
     type: "artworks";
-    props: {
-        items: Omit<ArtworkProps, 'id'>[];
-    };
+    props: Omit<ArtworkProps, 'id'>;
 };
 
 export type ContentType = TextContent | ArtworksContent;
 
 export type Project = {
     id: string
+    slug: string
     cover: Omit<ArtworkProps, 'id'>
     content: ContentType[]
 }
