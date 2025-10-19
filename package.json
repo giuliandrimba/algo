@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "lodash": "^4.17.21",
     "next": "15.5.6",
     "openai": "^6.5.0",
     "react": "19.1.0",
@@ -28,6 +29,7 @@
     "@storybook/addon-vitest": "^9.1.13",
     "@storybook/nextjs-vite": "^9.1.13",
     "@tailwindcss/postcss": "^4",
+    "@types/lodash": "^4.17.20",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

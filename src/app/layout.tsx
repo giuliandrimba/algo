@@ -4,65 +4,7 @@ import { Text } from "@/components/text/Text";
 import { Container } from "@/components/blocks/Container";
 import "./globals.css";
 import { AppProvider } from "@/context/AppContext";
-import type { Project, ContentType } from "@/types";
-import { faker } from "@faker-js/faker";
-
-async function fetchItems(): Promise<Project[]> {
-  console.log('fetchItems')
-  const items = [];
-
-  for (let i = 0; i < 12; i++) {
-    const item = {
-      id: i.toString(),
-      slug: faker.lorem.slug(),
-      cover: {
-        asset: {
-          src: "/assets/artwork.jpg",
-          alt: faker.book.title(),
-        },
-        meta: {
-          type: "image",
-          title: faker.word.noun(),
-          tech: faker.word.words(),
-          date: faker.date.past().toDateString(),
-        },
-      },
-      content: [] as ContentType[],
-    };
-
-    for (let j = 0; j < Math.round(Math.random() * 10); j++) {
-      const isText = Math.random() < 0.5;
-      if (isText) {
-        item.content.push({
-          type: "text",
-          props: {
-            value: faker.lorem.sentences(),
-          },
-        });
-      } else {
-        item.content.push({
-          type: "artworks",
-          props: {
-            asset: {
-              src: "/assets/artwork.jpg",
-              alt: "Artwork",
-            },
-            meta: {
-              type: "image",
-              title: faker.word.noun(),
-              tech: "Many",
-              date: "Today",
-            },
-          },
-        });
-      }
-    }
-
-    items.push(item);
-  }
-
-  return items;
-}
+import fetchItems from "@/lib/fetchItems";
 
 export default async function RootLayout({
   children,
@@ -86,7 +28,7 @@ export default async function RootLayout({
                 accents, she captures the tension between permanence and decay.
               </Text>
               <section>{children}</section>
-              <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center bg-white">
+              <footer className="row-start-3 flex gap-[24px] mt-60 flex-wrap items-center justify-center bg-white">
                 <Text>
                   A F O R M A . is a curation of artworks generated with code,
                   by coders.

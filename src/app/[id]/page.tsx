@@ -22,7 +22,7 @@ export default function ProjectPage() {
   }, [items, id]);
 
   return (
-    <section className="flex flex-col justify-center gap-20 w-full items-center pb-60">
+    <section className="flex flex-col justify-center gap-20 w-full items-center">
       <Button as={Link} href='/'>Back</Button>
       {project && <Artwork className="mb-20" {...project.cover} />}
       {project?.content.map((content: ContentType, index: number) => {
