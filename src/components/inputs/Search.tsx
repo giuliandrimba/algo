@@ -5,12 +5,15 @@ type SearchProps = {
   label?: string;
   className?: string;
   placeholder?: string;
+  onChange?: (value:string) => void
 };
 
-export const Search = ({ label, className, ...props }: SearchProps) => {
+export const Search = ({ label, className, onChange, ...props }: SearchProps) => {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("submit");
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData.entries());
+    onChange?.(data.search.toString());
   };
 
   return (
@@ -18,6 +21,7 @@ export const Search = ({ label, className, ...props }: SearchProps) => {
       <span className="flex gap-2 justify-between min-w-[580px] max-w-fit border-b-1">
         <input
           type="text"
+          name='search'
           className={clsx(
             "placeholder:text-gray-500 focus:outline-hidden  placeholder:italic placeholder:text-sm flex-1",
             className,

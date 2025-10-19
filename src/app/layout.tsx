@@ -10,7 +10,7 @@ import { faker } from "@faker-js/faker";
 async function fetchItems(): Promise<Project[]> {
   const items = []
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 12; i++) {
     const item = {
       id: faker.string.uuid(),
       cover: {
