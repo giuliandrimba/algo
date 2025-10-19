@@ -30,10 +30,8 @@ export default async function RootLayout({
               <section>{children}</section>
               <footer className="row-start-3 flex gap-[24px] mt-60 flex-wrap items-center justify-center bg-white">
                 <Text>
-                  A F O R M A . is a curation of artworks generated with code,
-                  by coders.
+                  @2025
                 </Text>
-                <Text>@2025</Text>
               </footer>
             </Container>
           </main>

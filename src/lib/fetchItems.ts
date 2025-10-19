@@ -4,17 +4,21 @@ import { faker } from "@faker-js/faker";
 export default async (): Promise<Project[]> => {
   const items = [];
 
+  let images = ["/assets/image-2.jpg", "/assets/image-3.jpg", "/assets/image-5.jpg"]
+  const getRndImage = () => images[Math.floor(Math.random() * images.length)];
+
   for (let i = 0; i < 12; i++) {
+    const isVideo = Math.random() < 0.5;
     const item = {
       id: i.toString(),
       slug: faker.lorem.slug(),
       cover: {
         asset: {
-          src: "/assets/artwork.jpg",
+          src: isVideo ? "/assets/video.mp4" : getRndImage(),
           alt: faker.book.title(),
         },
         meta: {
-          type: "image",
+          type: isVideo ? "video" : "image",
           title: faker.word.noun(),
           tech: faker.word.words(),
           date: faker.date.past().toDateString(),
@@ -37,7 +41,7 @@ export default async (): Promise<Project[]> => {
           type: "artworks",
           props: {
             asset: {
-              src: "/assets/artwork.jpg",
+              src: getRndImage(),
               alt: "Artwork",
             },
             meta: {

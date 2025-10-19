@@ -40,7 +40,7 @@ export const Artwork = ({
       animate="visible"
       transition={{ duration: 0.35, delay: 0 }}
     >
-      {meta.type === "media" && typeof asset.src === "string" && (
+      {meta.type === "video" && typeof asset.src === "string" && (
         <video
           className="aspect-auto border-[50px] border-black"
           src={asset.src}
@@ -48,7 +48,7 @@ export const Artwork = ({
           loop
           muted
         >
-          <track kind="captions" src="" label="No captions available" />
+          <track kind="captions" src={undefined} label="No captions available" />
         </video>
       )}
       {meta.type === "image" && (
